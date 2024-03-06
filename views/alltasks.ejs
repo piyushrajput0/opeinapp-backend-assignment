@@ -1,0 +1,38 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Management</title>
+    <!-- Include CSS files for styling -->
+    <link rel="stylesheet" href="styles.task.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Task list view -->
+        <div class="task-list">
+            <h1>Tasks</h1>
+            <ul id="task-list">
+                <!-- Task items will be dynamically added here -->
+                <li><% tasks.forEach(task => { %>
+                    const taskItem = document.createElement('li');
+                  
+                        <h3><%= task.title %></h3>
+                        <p>Description: <% =task.description %></p>
+                        <p>Due Date: <% =task.due_date %></p>
+                        <p>Status: <% =task.status %></p>
+                    
+                    
+               <% }); %>
+
+            </li>
+               
+              
+            </ul>
+        </div>
+    </div>
+    <!-- Include JavaScript files for functionality -->
+    <!-- <script src="scripts.js"></script> -->
+</body>
+</html>
